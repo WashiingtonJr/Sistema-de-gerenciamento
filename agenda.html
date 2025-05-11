@@ -1,0 +1,111 @@
+<!-- Agenda Content Module -->
+<div class="agenda-content">
+    <!-- Top Navigation da Agenda -->
+    <header class="bg-white shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <h1 class="text-xl font-semibold text-gray-800">Agenda</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+                <i class="fas fa-plus mr-2"></i> Nova Consulta
+            </button>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Agenda -->
+    <main class="p-4">
+        <!-- Navegação de datas -->
+        <div class="bg-white rounded-lg shadow mb-6">
+            <div class="p-4 flex items-center ajustify-between border-b">
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 class="text-lg font-semibold">Junho 2023</h2>
+                    <button class="p-2 rounded-full hover:bg-gray-100">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="ml-4 px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
+                        Hoje
+                    </button>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button id="dayView" class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">Dia</button>
+                    <button id="weekView" class="px-3 py-1 hover:bg-gray-100 rounded-full text-sm">Semana</button>
+                    <button id="monthView" class="px-3 py-1 hover:bg-gray-100 rounded-full text-sm">Mês</button>
+                </div>
+            </div>
+
+            <!-- Cabeçalho de dias da semana -->
+            <div class="grid grid-cols-7 divide-x border-b">
+                <div class="text-center py-2 font-medium text-gray-500">Dom</div>
+                <div class="text-center py-2 font-medium text-gray-500">Seg</div>
+                <div class="text-center py-2 font-medium text-gray-500">Ter</div>
+                <div class="text-center py-2 font-medium text-gray-500">Qua</div>
+                <div class="text-center py-2 font-medium text-gray-500">Qui</div>
+                <div class="text-center py-2 font-medium text-gray-500">Sex</div>
+                <div class="text-center py-2 font-medium text-gray-500">Sáb</div>
+            </div>
+
+            <!-- Dias do calendário (exemplo estático) -->
+            <div class="grid grid-cols-7 divide-x divide-y">
+                <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+                    <div class="text-gray-400">31</div>
+                </div>
+                <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+                    <div>1</div>
+                    <div class="mt-1">
+                        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+                    </div>
+                </div>
+                <!-- ... outros dias conforme necessário ... -->
+            </div>
+        </div>
+
+        <!-- Lista de Horários -->
+        <div class="bg-white rounded-lg shadow p-4">
+            <h2 class="text-lg font-semibold mb-4">Agenda do Dia</h2>
+
+            <div class="divide-y">
+                <!-- 08:00 -->
+                <div class="py-4">
+                    <div class="text-gray-500 text-sm mb-2">08:00</div>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-medium">Carlos Oliveira</p>
+                                <p class="text-sm text-gray-600">Pós-operatório - 5ª sessão</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">08:00 - 09:00</p>
+                                <p class="text-xs text-gray-500">Sala 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 09:00 -->
+                <div class="py-4">
+                    <div class="text-gray-500 text-sm mb-2">09:00</div>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-3 rounded">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-medium">Ana Santos</p>
+                                <p class="text-sm text-gray-600">Lombalgia - 10ª sessão</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">09:00 - 10:00</p>
+                                <p class="text-xs text-gray-500">Sala 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horário sem consulta -->
+                <div class="py-4 text-center text-gray-400">
+                    10:00 - Sem consulta agendada
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
