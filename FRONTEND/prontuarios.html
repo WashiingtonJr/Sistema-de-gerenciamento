@@ -1,0 +1,309 @@
+<main class="p-6">
+
+    <!-- Mobile Header with Toggle Button -->
+    <div class="md:hidden flex items-center justify-between mb-6">
+    <button class="toggle-sidebar bg-gray-800 text-white p-2 rounded-md hidden" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+    </button>
+    <h1 class="text-2xl font-bold text-gray-800">Prontuários Médicos</h1>
+    </div>
+    <!-- Main Header -->
+    <div class="flex items-center justify-between mb-8">
+    <div>
+    <h1 class="text-3xl font-bold text-gray-800">Prontuários Médicos</h1>
+    <p class="text-gray-600">Gerencie os registros médicos dos pacientes</p>
+    </div>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg flex items-center">
+    <i class="fas fa-plus mr-2"></i>Novo Prontuário
+                    </button>
+    </div>
+    <!-- Search and Filter Section -->
+    <div class="bg-white rounded-lg shadow p-6 mb-8">
+    <div class="flex flex-col md:flex-row gap-4">
+    <div class="flex-1">
+    <label class="block text-gray-700 mb-2">Buscar Paciente</label>
+    <div class="relative">
+    <input class="w-full p-3 border rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Digite o nome ou CPF..." type="text"/>
+    <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+    </div>
+    </div>
+    <div class="w-full md:w-48">
+    <label class="block text-gray-700 mb-2">Filtrar por</label>
+    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <option>Todos</option>
+    <option>Últimos 7 dias</option>
+    <option>Último mês</option>
+    <option>Sem diagnósticos</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <!-- Statistics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white rounded-lg shadow p-6 flex items-center">
+    <div class="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
+    <i class="fas fa-file-medical text-xl"></i>
+    </div>
+    <div>
+    <p class="text-gray-500">Total Prontuários</p>
+    <h3 class="text-2xl font-bold text-gray-800">1,248</h3>
+    </div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex items-center">
+    <div class="p-3 rounded-full bg-green-100 text-green-600 mr-4">
+    <i class="fas fa-check-circle text-xl"></i>
+    </div>
+    <div>
+    <p class="text-gray-500">Atendimentos Hoje</p>
+    <h3 class="text-2xl font-bold text-gray-800">24</h3>
+    </div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex items-center">
+    <div class="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
+    <i class="fas fa-exclamation-circle text-xl"></i>
+    </div>
+    <div>
+    <p class="text-gray-500">Pendentes</p>
+    <h3 class="text-2xl font-bold text-gray-800">8</h3>
+    </div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex items-center">
+    <div class="p-3 rounded-full bg-red-100 text-red-600 mr-4">
+    <i class="fas fa-user-nurse text-xl"></i>
+    </div>
+    <div>
+    <p class="text-gray-500">Médicos Ativos</p>
+    <h3 class="text-2xl font-bold text-gray-800">12</h3>
+    </div>
+    </div>
+    </div>
+    <!-- Patient Records Table -->
+    <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+    <div class="p-4 border-b flex items-center justify-between">
+    <h3 class="text-lg font-semibold text-gray-800">Registros Recentes</h3>
+    <button class="text-blue-500 hover:text-blue-700">
+    <i class="fas fa-sync-alt mr-1"></i>Atualizar
+                        </button>
+    </div>
+    <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+    <tr>
+    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Paciente</th>
+    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Médico</th>
+    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Diagnóstico</th>
+    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+    </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+    <tr class="hover:bg-gray-50">
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="flex items-center">
+    <div class="flex-shrink-0 h-10 w-10">
+    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold">JP</div>
+    </div>
+    <div class="ml-4">
+    <div class="text-sm font-medium text-gray-900">João Pedro Silva</div>
+    <div class="text-sm text-gray-500">CPF: 123.456.789-00</div>
+    </div>
+    </div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">15/07/2023</div>
+    <div class="text-sm text-gray-500">09:30 AM</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Dr. Carlos Alberto</div>
+    <div class="text-sm text-gray-500">Cardiologia</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Hipertensão</div>
+    <div class="text-sm text-gray-500">CID I10</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Concluído</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+    <button class="text-blue-500 hover:text-blue-700 mx-1">
+    <i class="fas fa-eye"></i>
+    </button>
+    <button class="text-green-500 hover:text-green-700 mx-1">
+    <i class="fas fa-edit"></i>
+    </button>
+    <button class="text-red-500 hover:text-red-700 mx-1">
+    <i class="fas fa-trash"></i>
+    </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-gray-50">
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="flex items-center">
+    <div class="flex-shrink-0 h-10 w-10">
+    <div class="h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-semibold">MA</div>
+    </div>
+    <div class="ml-4">
+    <div class="text-sm font-medium text-gray-900">Maria Aparecida</div>
+    <div class="text-sm text-gray-500">CPF: 987.654.321-00</div>
+    </div>
+    </div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">14/07/2023</div>
+    <div class="text-sm text-gray-500">14:15 PM</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Dra. Ana Paula</div>
+    <div class="text-sm text-gray-500">Ginecologia</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Pré-natal</div>
+    <div class="text-sm text-gray-500">CID Z34</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Concluído</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+    <button class="text-blue-500 hover:text-blue-700 mx-1">
+    <i class="fas fa-eye"></i>
+    </button>
+    <button class="text-green-500 hover:text-green-700 mx-1">
+    <i class="fas fa-edit"></i>
+    </button>
+    <button class="text-red-500 hover:text-red-700 mx-1">
+    <i class="fas fa-trash"></i>
+    </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-gray-50">
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="flex items-center">
+    <div class="flex-shrink-0 h-10 w-10">
+    <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-semibold">RF</div>
+    </div>
+    <div class="ml-4">
+    <div class="text-sm font-medium text-gray-900">Ricardo Ferreira</div>
+    <div class="text-sm text-gray-500">CPF: 456.123.789-00</div>
+    </div>
+    </div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">13/07/2023</div>
+    <div class="text-sm text-gray-500">10:00 AM</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Dr. Marcos Silva</div>
+    <div class="text-sm text-gray-500">Oftalmologia</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Miopia</div>
+    <div class="text-sm text-gray-500">CID H52.1</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pendente</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+    <button class="text-blue-500 hover:text-blue-700 mx-1">
+    <i class="fas fa-eye"></i>
+    </button>
+    <button class="text-green-500 hover:text-green-700 mx-1">
+    <i class="fas fa-edit"></i>
+    </button>
+    <button class="text-red-500 hover:text-red-700 mx-1">
+    <i class="fas fa-trash"></i>
+    </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-gray-50">
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="flex items-center">
+    <div class="flex-shrink-0 h-10 w-10">
+    <div class="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-semibold">AS</div>
+    </div>
+    <div class="ml-4">
+    <div class="text-sm font-medium text-gray-900">Amanda Souza</div>
+    <div class="text-sm text-gray-500">CPF: 789.123.456-00</div>
+    </div>
+    </div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">12/07/2023</div>
+    <div class="text-sm text-gray-500">16:45 PM</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Dra. Juliana Costa</div>
+    <div class="text-sm text-gray-500">Dermatologia</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-900">Dermatite</div>
+    <div class="text-sm text-gray-500">CID L30.9</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Concluído</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+    <button class="text-blue-500 hover:text-blue-700 mx-1">
+    <i class="fas fa-eye"></i>
+    </button>
+    <button class="text-green-500 hover:text-green-700 mx-1">
+    <i class="fas fa-edit"></i>
+    </button>
+    <button class="text-red-500 hover:text-red-700 mx-1">
+    <i class="fas fa-trash"></i>
+    </button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <div class="p-4 border-t flex items-center justify-between">
+    <div class="text-sm text-gray-500">
+                            Mostrando <span class="font-semibold">1</span> a <span class="font-semibold">4</span> de <span class="font-semibold">48</span> resultados
+                        </div>
+    <div class="flex space-x-1">
+    <button class="px-3 py-1 border rounded-md bg-gray-100 text-gray-700">
+    <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="px-3 py-1 border rounded-md bg-blue-500 text-white">1</button>
+    <button class="px-3 py-1 border rounded-md hover:bg-gray-100">2</button>
+    <button class="px-3 py-1 border rounded-md hover:bg-gray-100">3</button>
+    <button class="px-3 py-1 border rounded-md hover:bg-gray-100">4</button>
+    <button class="px-3 py-1 border rounded-md hover:bg-gray-100">5</button>
+    <button class="px-3 py-1 border rounded-md bg-gray-100 text-gray-700">
+    <i class="fas fa-chevron-right"></i>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Charts Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Patient Records by Month -->
+    <div class="bg-white rounded-lg shadow p-6">
+    <div class="flex items-center justify-between mb-4">
+    <h3 class="text-lg font-semibold text-gray-800">Prontuários por Mês</h3>
+    <select class="p-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <option>2023</option>
+    <option>2022</option>
+    <option>2021</option>
+    </select>
+    </div>
+    <div class="chart-container">
+    <canvas id="recordsChart"></canvas>
+    </div>
+    </div>
+    <!-- Diagnoses Distribution -->
+    <div class="bg-white rounded-lg shadow p-6">
+    <div class="flex items-center justify-between mb-4">
+    <h3 class="text-lg font-semibold text-gray-800">Distribuição de Diagnósticos</h3>
+    <button class="text-blue-500 hover:text-blue-700">
+    <i class="fas fa-download mr-1"></i>Exportar
+                            </button>
+    </div>
+    <div class="chart-container">
+    <canvas id="diagnosisChart"></canvas>
+    </div>
+    </div>
+    </div>
+    
+    </main>

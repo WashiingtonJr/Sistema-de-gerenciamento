@@ -1,0 +1,417 @@
+<header class="bg-white shadow-sm p-4 flex items-center justify-between">
+    <div class="flex items-center">
+    <button class="mr-4 text-gray-500 hover:text-gray-700 hidden mobile-menu-btn" id="sidebarToggle">
+    <i class="fas fa-bars text-xl"></i>
+    </button>
+    <h1 class="text-xl font-semibold text-gray-800">Agenda</h1>
+    </div>
+
+   </header>
+    <main class="p-4">
+    <!-- Date Navigation -->
+    <div class="bg-white rounded-lg shadow mb-6">
+    <div class="p-4 flex items-center justify-between border-b">
+    <div class="flex items-center space-x-4">
+    <button class="p-2 rounded-full hover:bg-gray-100">
+    <i class="fas fa-chevron-left"></i>
+    </button>
+    <h2 class="text-lg font-semibold">Junho 2023</h2>
+    <button class="p-2 rounded-full hover:bg-gray-100">
+    <i class="fas fa-chevron-right"></i>
+    </button>
+    <button class="ml-4 px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
+                                    Hoje
+                                </button>
+    </div>
+    <div class="flex items-center space-x-2">
+    <button class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm" id="dayView">
+                                    Dia
+                                </button>
+    <button class="px-3 py-1 hover:bg-gray-100 rounded-full text-sm" id="weekView">
+                                    Semana
+                                </button>
+    <button class="px-3 py-1 hover:bg-gray-100 rounded-full text-sm" id="monthView">
+                                    Mês
+                                </button>
+    </div>
+    </div>
+    <!-- Week Days Header -->
+    <div class="grid grid-cols-7 divide-x border-b">
+    <div class="text-center py-2 font-medium text-gray-500">Dom</div>
+    <div class="text-center py-2 font-medium text-gray-500">Seg</div>
+    <div class="text-center py-2 font-medium text-gray-500">Ter</div>
+    <div class="text-center py-2 font-medium text-gray-500">Qua</div>
+    <div class="text-center py-2 font-medium text-gray-500">Qui</div>
+    <div class="text-center py-2 font-medium text-gray-500">Sex</div>
+    <div class="text-center py-2 font-medium text-gray-500">Sáb</div>
+    </div>
+    <!-- Calendar Days -->
+    <div class="grid grid-cols-7 divide-x divide-y">
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div class="text-gray-400">28</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div class="text-gray-400">29</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div class="text-gray-400">30</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div class="text-gray-400">31</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>1</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-green-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>2</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-purple-500 rounded-full"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>3</div>
+    </div>
+    <!-- Second Row -->
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>4</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>5</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>6</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>7</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-red-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>8</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>9</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>10</div>
+    </div>
+    <!-- Third Row -->
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>11</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>12</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-purple-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer active">
+    <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto">13</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-green-500 rounded-full ml-1"></span>
+    <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>14</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-red-500 rounded-full"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>15</div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>16</div>
+    <div class="mt-1">
+    <span class="inline-block w-2 h-2 bg-purple-500 rounded-full"></span>
+    </div>
+    </div>
+    <div class="p-2 text-center h-24 hover:bg-gray-50 cursor-pointer">
+    <div>17</div>
+    </div>
+    </div>
+    </div>
+    <!-- Day Schedule -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <!-- Time Slots -->
+    <div class="lg:col-span-3 bg-white rounded-lg shadow overflow-hidden">
+    <div class="p-4 border-b flex justify-between items-center">
+    <h2 class="text-lg font-semibold">Terça-feira, 13 de Junho</h2>
+    <div class="flex items-center space-x-2">
+    <div class="flex items-center">   
+    <div class="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+    <span class="text-xs">desmarcados</span>
+    </div>    
+    <div class="flex items-center">   
+    <div class="w-3 h-3 rounded-full bg-blue-500 mr-1"></div>
+    <span class="text-xs">Consulta</span>
+    </div>
+    <div class="flex items-center ml-2">
+    <div class="w-3 h-3 rounded-full bg-green-500 mr-1"></div>
+    <span class="text-xs">Retorno</span>
+    </div>
+    <div class="flex items-center ml-2">
+    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-1"></div>
+    <span class="text-xs">Avaliação</span>
+    </div>
+    </div>
+    </div>
+    <div class="divide-y">
+    <!-- 8:00 AM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">08:00</div>
+    <div class="appointment-card bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Carlos Oliveira</h3>
+    <p class="text-sm text-gray-600">Pós-operatório de ombro - 5ª sessão</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">08:00 - 09:00</p>
+    <p class="text-xs text-gray-500">Sala 1</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fab fa-whatsapp mr-1"></i> Confirmar
+                                            </button>
+    </div>
+    </div>
+    </div>
+    <!-- 9:00 AM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">09:00</div>
+    <div class="appointment-card bg-green-50 border-l-4 border-green-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Ana Santos</h3>
+    <p class="text-sm text-gray-600">Lombalgia - 10ª sessão</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">09:00 - 10:00</p>
+    <p class="text-xs text-gray-500">Sala 2</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-check mr-1"></i> Confirmado
+                                            </button>
+    </div>
+    </div>
+    </div>
+    <!-- 10:00 AM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">10:00</div>
+    <div class="text-center py-4 text-gray-400">
+                                        Sem consultas agendadas
+                                    </div>
+    </div>
+    <!-- 11:00 AM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">11:00</div>
+    <div class="appointment-card bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Mariana Costa</h3>
+    <p class="text-sm text-gray-600">Avaliação inicial</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">11:00 - 12:00</p>
+    <p class="text-xs text-gray-500">Sala 1</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Novo Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fab fa-whatsapp mr-1"></i> Enviar instruções
+                                            </button>
+    </div>
+    </div>
+    </div>
+    <!-- Lunch Break -->
+    <div class="time-slot p-4 bg-gray-50">
+    <div class="text-gray-500 text-sm mb-2">12:00 - 14:00</div>
+    <div class="text-center py-2 text-gray-500 italic">
+                                        Intervalo para almoço
+                                    </div>
+    </div>
+    <!-- 2:00 PM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">14:00</div>
+    <div class="appointment-card bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Roberto Almeida</h3>
+    <p class="text-sm text-gray-600">Reabilitação pós-fratura - 3ª sessão</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">14:00 - 15:00</p>
+    <p class="text-xs text-gray-500">Sala 3</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fab fa-whatsapp mr-1"></i> Confirmar
+                                            </button>
+    </div>
+    </div>
+    </div>
+    <!-- 3:00 PM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">15:00</div>
+    <div class="appointment-card bg-green-50 border-l-4 border-green-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Patrícia Mendes</h3>
+    <p class="text-sm text-gray-600">Dor cervical - 6ª sessão</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">15:00 - 16:00</p>
+    <p class="text-xs text-gray-500">Sala 2</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-check mr-1"></i> Confirmado
+                                            </button>
+    </div>
+    </div>
+    </div>
+    <!-- 4:00 PM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">16:00</div>
+    <div class="text-center py-4 text-gray-400">
+                                        Sem consultas agendadas
+                                    </div>
+    </div>
+    <!-- 5:00 PM -->
+    <div class="time-slot p-4">
+    <div class="text-gray-500 text-sm mb-2">17:00</div>
+    <div class="appointment-card bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3 mb-2 cursor-pointer">
+    <div class="flex justify-between items-start">
+    <div>
+    <h3 class="font-medium">Luiz Fernando</h3>
+    <p class="text-sm text-gray-600">Tendinite - 2ª sessão</p>
+    </div>
+    <div class="text-right">
+    <p class="text-sm font-medium">17:00 - 18:00</p>
+    <p class="text-xs text-gray-500">Sala 1</p>
+    </div>
+    </div>
+    <div class="flex mt-2 space-x-2">
+    <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded flex items-center">
+    <i class="fas fa-file-medical mr-1"></i> Prontuário
+                                            </button>
+    <button class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded flex items-center">
+    <i class="fab fa-whatsapp mr-1"></i> Confirmar
+                                            </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Quick Actions & Stats -->
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+    <div class="p-4 border-b">
+    <h2 class="text-lg font-semibold">Ações Rápidas</h2>
+    </div>
+    <div class="p-4 space-y-3">
+    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+    <i class="fas fa-plus mr-2"></i> Nova Consulta
+                                </button>
+    <button class="w-full bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg flex items-center justify-center">
+    <i class="fas fa-user-plus mr-2"></i> Novo Paciente
+                                </button>
+    <button class="w-full bg-white border border-green-600 text-green-600 hover:bg-green-50 px-4 py-2 rounded-lg flex items-center justify-center">
+    <i class="fas fa-sync-alt mr-2"></i> Reagendar
+                                </button>
+    </div>
+    <div class="p-4 border-t">
+    <h2 class="text-lg font-semibold mb-3">Resumo do Dia</h2>
+    <div class="space-y-4">
+    <div>
+    <p class="text-sm text-gray-500">Consultas agendadas</p>
+    <p class="text-xl font-bold">6</p>
+    </div>
+    <div>
+    <p class="text-sm text-gray-500">Confirmadas</p>
+    <p class="text-xl font-bold">2</p>
+    </div>
+    <div>
+    <p class="text-sm text-gray-500">A confirmar</p>
+    <p class="text-xl font-bold">3</p>
+    </div>
+    <div>
+    <p class="text-sm text-gray-500">Horários livres</p>
+    <p class="text-xl font-bold">4</p>
+    </div>
+    </div>
+    </div>
+    <div class="p-4 border-t">
+    <h2 class="text-lg font-semibold mb-3">Próximos Dias</h2>
+    <div class="space-y-3">
+    <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer">
+    <div>
+    <p class="font-medium">Amanhã</p>
+    <p class="text-sm text-gray-500">5 consultas</p>
+    </div>
+    <div class="flex">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-green-500 rounded-full ml-1"></span>
+    <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer">
+    <div>
+    <p class="font-medium">Quinta, 15/06</p>
+    <p class="text-sm text-gray-500">3 consultas</p>
+    </div>
+    <div class="flex">
+    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-red-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer">
+    <div>
+    <p class="font-medium">Sexta, 16/06</p>
+    <p class="text-sm text-gray-500">4 consultas</p>
+    </div>
+    <div class="flex">
+    <span class="inline-block w-2 h-2 bg-purple-500 rounded-full"></span>
+    <span class="inline-block w-2 h-2 bg-green-500 rounded-full ml-1"></span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
